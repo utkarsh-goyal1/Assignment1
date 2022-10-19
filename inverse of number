@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int c=n;
+        int d=0;
+        while(c>0)
+        {
+            d++;
+            c=c/10;
+        }
+        int []A=new int[d];
+        int []B=new int[d];
+        int i=0;
+        while(n>0)
+        {
+            int r=n%10;
+            A[i++]=r;
+            n=n/10;
+        }
+        for(int j=0;j<d;j++)
+        {
+            B[A[j]-1]=j+1;
+            
+        }
+        for(int l=d-1;l>=0;l--)
+        {
+            System.out.print(B[l]);
+        }
+	
+    }
+}
