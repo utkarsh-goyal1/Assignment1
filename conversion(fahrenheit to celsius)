@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int min_f=sc.nextInt();
+        int max_f=sc.nextInt();
+        int n=sc.nextInt();
+        double res1;
+        int i=0;
+        while(i<=max_f){
+            double res1;
+            res1=(0.556)*((min_f)-32);
+            System.out.print(min_f+"\t");
+            System.out.println((int)res1);
+            min_f+=n;
+            i+=n;
+        }
+    }
+}
