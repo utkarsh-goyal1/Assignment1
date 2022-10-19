@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        	Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int div,rem,divi;
+		div=a;
+		divi=b;
+		while((divi % div)!=0)
+		{
+			rem=divi%div;
+			divi=div;
+			div=rem;
+			
+			
+		}
+		System.out.print(div);
+	
+    }
+}
