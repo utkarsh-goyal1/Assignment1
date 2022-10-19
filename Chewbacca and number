@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        long n=sc.nextLong();
+        long news=0;
+        long a=1;
+        while(n!=0)
+        {
+            long r=n%10;
+            long temp=9-r;
+           
+            if(temp==0 && n<10)
+            {
+                news=news+r*a;
+            }
+            else if (temp<=r)
+            {
+                news=news+temp*a;
+                
+            }
+            else{
+                news=news+r*a;
+            }
+            a=a*10;
+            n=n/10;
+        }
+        System.out.println(news);
+
+    }
+}
