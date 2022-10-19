@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {       
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		
+		double determinant=b*b-4*a*c;
+		if (determinant>0)
+		{
+			System.out.println("Real and Distinct");
+			double x=(-b+Math.sqrt(determinant))/(2*a);
+			double y=(-b-Math.sqrt(determinant))/(2*a);
+            if (x<y){
+                System.out.print((int)x+" ");
+                System.out.print((int)y);
+            }
+            else{
+                System.out.print((int)y+" ");
+                System.out.print((int)x);
+            }
+		}
+		else if(determinant==0)
+		{
+			System.out.println("Real and Equal");
+			double x=-b/(2*a);
+			System.out.print((int)x+" ");
+            System.out.print((int)x);
+		}
+		else
+		{
+			System.out.println("Imaginary");
+		}
+}
+    }
