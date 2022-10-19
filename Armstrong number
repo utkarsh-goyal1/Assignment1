@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int c=n;
+        int res=c;
+        int d=0;
+        int sum=0;
+        while(n>0)
+        {
+            d++;
+            n=n/10;
+        }
+        while(c>0)
+        {
+            int r=c%10;
+            sum=sum+(int)Math.pow(r,d);
+            c=c/10;
+        }
+        if(sum==res)
+        {
+            System.out.print("true");
+        }
+        else{
+            System.out.print("false");
+        }
+        
+    }
+}
