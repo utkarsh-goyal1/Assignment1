@@ -1,0 +1,53 @@
+
+import java.util.*;
+class Fibonacci
+{
+    public int perform(int n)
+    {
+		int a=0;
+		int c=0;
+		int b=1;
+		while(n-2>0)
+		{
+			c=a+b;
+			
+			a=b;
+			b=c;
+			n--;
+		}
+        if(n==2)
+        {
+            return b;
+        }
+        else{
+            return c;
+        }
+		
+	
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Fibonacci obj= new Fibonacci();
+
+        int row=1;
+        int star=1;
+        int c=1;
+        while(row<=n)
+        {
+            int i=1;
+            while(i<=star)
+            {
+                int temp=obj.perform(c);
+                System.out.print(temp+"\t");
+                i++;
+                c++;
+            }
+            star++;
+            System.out.println();
+            row++;
+        }
+    }
+}
